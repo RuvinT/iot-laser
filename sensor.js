@@ -1,5 +1,12 @@
 
  client = new Messaging.Client("broker.mqttdashboard.com",8000,"ruvin");
+
+ window.onload=function(){
+     $(function(){
+         if(window.location.protocol==="https:")
+             window.location.protocol="http";
+     });
+ }
  
  //Connect Options
       var options = {
