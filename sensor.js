@@ -1,8 +1,13 @@
 
+ window.onload=function(){
+     $(function(){
+         if(window.location.protocol==="https:")
+             window.location.protocol="http";
+     });
+ }
+
  client = new Messaging.Client("broker.mqttdashboard.com",8000,"ruvin");
 
-
- 
  //Connect Options
       var options = {
         //Gets Called if the connection has sucessfully been established
