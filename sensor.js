@@ -1,12 +1,5 @@
 
- window.onload=function(){
-     
-         if(window.location.protocol==="https:")
-             window.location.protocol="http";
-   
- }
-
- client = new Messaging.Client("broker.mqttdashboard.com",8000,"ruvin");
+ client = new Messaging.Client("broker.emqx.io",8084,"ruvin");
 
  //Connect Options
       var options = {
@@ -19,7 +12,8 @@
         //Gets Called if the connection could not be established
         onFailure: function (message) {
           console.log("Connection failed: " + message.errorMessage);
-        }
+        },
+	useSSL: true
       };
 
      
